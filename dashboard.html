@@ -342,6 +342,40 @@ footer {
   table { font-size: 13px; }
   th, td { padding: 8px 10px; }
 }
+
+/* === Fane: Hva innspillene fordrer === */
+.info-boks { background: var(--farge-aksent-svak); border-left: 4px solid var(--farge-aksent); padding: 16px 20px; margin: 24px 0; border-radius: 4px; }
+.stikkord-liste { margin: 16px 0 24px 20px; line-height: 1.7; }
+.stikkord-liste li { margin-bottom: 6px; }
+.valg-boks { background: #faf8f3; border: 1px solid var(--farge-strek); padding: 16px 20px; border-radius: 4px; margin: 16px 0 32px 0; }
+.valg-liste { margin: 8px 0 8px 20px; line-height: 1.7; }
+.valg-liste li { margin-bottom: 10px; }
+.anbefaling-blokk { border: 1px solid var(--farge-strek); border-radius: 6px; padding: 20px 24px; margin: 24px 0; background: #fdfcfa; }
+.anbefaling-blokk h4 { color: var(--farge-aksent); margin: 0 0 8px 0; font-size: 17px; }
+.anbefaling-blokk h5 { margin: 18px 0 8px 0; font-size: 14px; color: var(--farge-tekst); text-transform: uppercase; letter-spacing: 0.5px; }
+.anbefaling-meta { color: var(--farge-tekst-svak); font-size: 13px; margin: 0 0 8px 0; }
+.anbefaling-utkast { background: #fafafa; padding: 10px 14px; border-left: 3px solid var(--farge-strek); margin: 8px 0 16px 0; font-size: 14px; }
+.tall-rad { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin: 14px 0; }
+.tall-celle { padding: 12px 6px; text-align: center; border-radius: 4px; }
+.tall-celle .tall { display: block; font-size: 22px; font-weight: 600; line-height: 1.1; }
+.tall-celle .etikett { display: block; font-size: 11px; color: var(--farge-tekst-svak); margin-top: 2px; }
+.tall-celle.st { background: #e8f5e8; }
+.tall-celle.sf { background: #f0f5e8; }
+.tall-celle.kr { background: #fceee0; }
+.tall-celle.av { background: #fae0e0; }
+.tall-celle.ib { background: #f0f0f0; }
+.tall-tolkning { font-size: 13px; color: var(--farge-tekst-svak); margin: 4px 0 16px 0; }
+.fordrer-liste { margin: 8px 0 12px 20px; line-height: 1.7; }
+.fordrer-liste li { margin-bottom: 6px; }
+.fordrer-liste.dissens li { color: var(--farge-tekst); }
+.valg-tekst { background: var(--farge-aksent-svak); padding: 12px 16px; border-radius: 4px; border-left: 3px solid var(--farge-aksent); margin: 8px 0 0 0; }
+@media (max-width: 720px) {
+  .tall-rad { grid-template-columns: repeat(5, 1fr); gap: 3px; }
+  .tall-celle { padding: 8px 2px; }
+  .tall-celle .tall { font-size: 16px; }
+  .tall-celle .etikett { font-size: 9px; }
+}
+
 </style>
 </head>
 <body>
@@ -360,6 +394,7 @@ footer {
 <button data-fane="aktorer">Aktørprofiler</button>
 <button data-fane="opprop">Oppropet</button>
 <button data-fane="strukturer">Strukturelle funn</button>
+<button data-fane="fordringer">Hva innspillene fordrer</button>
 <button data-fane="innspill">Innspilloversikt</button>
 <button data-fane="metode">Metode og åpenhet</button>
 </nav>
@@ -1878,6 +1913,535 @@ footer {
 </table>
 
 <p>I tillegg har 39 innspill kjennetegn som gjør det <em>sannsynlig</em> at innsenderen er fagperson, uten at det er eksplisitt erklært (akademisk språk, metodologisk argumentasjon, referanser til faglitteratur). Disse er kategorisert som «sannsynlig fagperson» i de individuelle kodingene.</p>
+
+</section>
+
+<!-- ============== HVA INNSPILLENE FORDRER ============== -->
+<section class="fane-innhold" id="fordringer">
+
+<h2>Hva innspillene fordrer</h2>
+
+<p class="ingress">Denne fanen oppsummerer hvilke konkrete endringer høringsinnspillene samlet sett fordrer av Helsedirektoratet, brutt ned på hver av de tolv anbefalingene i utkastet pluss kapittel 1 (bakgrunn, metode og prosess). Den er strukturert per område fordi det er der valgene faktisk må tas. Hver seksjon viser hva utkastet sier, tallene fra kodingen, hva de kritiske innspillene fordrer, hva dissensbrevene fordrer, og det strukturelle valget Helsedirektoratet står overfor.</p>
+
+<div class="info-boks">
+<strong>Hva denne fanen er — og hva den ikke er.</strong> Dette er en utvidet kartlegging, ikke en vektet syntese eller alternativ retningslinje. Den oppsummerer hva som faktisk fordres i innspillene uten å foreslå hvilken retning Helsedirektoratet bør velge. De strukturelle valgene er formulert som spørsmål, ikke anbefalinger. Tallene viser hvor mange av de 458 innspillene som er kodet med ulik posisjon — den biomedisinske siden er kraftig overrepresentert i materialet og dette gjenspeiles i flertallskravene. Helsedirektoratets oppgave er nettopp å vurdere disse kravene faglig, ikke å følge dem mekanisk.
+</div>
+
+<h3>Stikkordsoppsummering</h3>
+
+<p>De gjennomgående kravene i innspillene, fra det mest dominerende og nedover:</p>
+
+<ol class="stikkord-liste">
+<li><strong>Egen retningslinje for ME/CFS</strong> — adskilt fra langvarig utmattelse (301 av 458 innspill berører dette; det mest dominerende kravet i hele høringen).</li>
+<li><strong>PEM (anstrengelsesutløst symptomforverring) som kjernekriterium</strong> — ikke ett av flere symptomer (194 innspill).</li>
+<li><strong>Tydelig diagnostisk skille</strong> mellom ME/CFS og langvarig utmattelse av annen årsak (118 innspill).</li>
+<li><strong>Kritikk av biopsykososial modell</strong> som overordnet rammeverk for ME/CFS (111 innspill).</li>
+<li><strong>Canadakriteriene</strong> som obligatorisk diagnostisk standard, ikke valgfri (103 innspill — flertallet vil ha skjerping fra «anbefales» til «skal»).</li>
+<li><strong>Pacing/aktivitetsavpasning innenfor tålegrense</strong> som standard for PEM-pasienter — ikke gradert aktivitetsøkning (89 innspill).</li>
+<li><strong>Avvising av psykologisering</strong> — ME/CFS som somatisk sykdom forankret i ICD-10 G93.3 / ICD-11 8E49 (92 innspill).</li>
+<li><strong>NICE NG206 (2021)</strong> som internasjonal referansestandard (77 innspill).</li>
+<li><strong>Eksplisitt frarådning</strong> av kognitiv terapi som behandling, Lightning Process og gradert treningsterapi (samlet 52 + 14 = 66 innspill).</li>
+<li><strong>Eget kapittel for alvorlig og svært alvorlig syke ME-pasienter</strong> — Røysumtunet-modellen som referanse (67 innspill).</li>
+<li><strong>Kompetansekrav</strong> for fastleger og spesialister — ikke kun pålegge dem oppgaver uten kunnskap (48 innspill).</li>
+<li><strong>Implementeringsklarhet</strong> — finansiering, kapasitet, samhandling mellom tjenester (84 innspill).</li>
+<li><strong>Bredere kunnskapsgrunnlag</strong> — internasjonal biomedisinsk ME-forskning som er underrepresentert i utkastet (61 innspill om forskning + 53 om at grunnlaget er for smalt).</li>
+<li><strong>Rettssikkerhet</strong> — særskilt vern mot tvangsmessige tiltak og urettmessige barnevernsinngrep (22 + 47 innspill om barn).</li>
+</ol>
+
+<h3>De uunngåelige strukturelle valgene</h3>
+
+<p>Innspillene tegner opp flere fundamentale valg som Helsedirektoratet ikke kan kompromisse bort. Hvert valg har konsekvenser som forplanter seg gjennom alle anbefalingene:</p>
+
+<div class="valg-boks">
+<ol class="valg-liste">
+<li><strong>Én retningslinje eller to?</strong> Skal langvarig utmattelse og ME/CFS behandles i samme dokument, eller adskilt? Et flertall (301 av 458) krever adskillelse. Fag-dissensen krever derimot at de holdes sammen for å motvirke det dissenten kaller nocebo-effekt og rigid sykdomsoppfatning.</li>
+<li><strong>PEM som styrende eller ett av flere kriterier?</strong> Hvis PEM er obligatorisk og styrende, kan ME/CFS-pasienter med PEM ikke gis samme aktivitetsråd som pasienter uten. Dette er den klinisk-operative kjernen i hele konflikten.</li>
+<li><strong>Hvilken kunnskapsbase?</strong> NICE NG206 (2021) representerer biomedisinsk paradigme; FHI/NKT representerer biopsykososial. De to traderingene gir motsatte anbefalinger på flere punkter.</li>
+<li><strong>Canadakriteriene «anbefales» eller «skal»?</strong> Den eneste anbefalingen med klart flertallsstøtte — men flertallet vil ha skjerping av formuleringen.</li>
+<li><strong>Pacing eller gradert økning?</strong> For pasienter med PEM er disse gjensidig uforenelige. Anbefalingen om aktivitetsregulering kan ikke beholde begge muligheter uten å bli klinisk meningsløs.</li>
+<li><strong>Fastlege, spesialist eller delt ansvar?</strong> Flertallet av innspillene mener fastlegen mangler kompetanse til ME-diagnostikk og bør ikke ha hovedansvar uten kompetanseheving.</li>
+<li><strong>Pediater eller BUP for barn?</strong> Valget speiler hele uenigheten — somatisk vs. psykiatrisk inngang til barnesykdom.</li>
+</ol>
+</div>
+
+<h3>Per anbefaling</h3>
+
+<p>I det følgende går vi gjennom hver av de tolv anbefalingene pluss kapittel 1, i samme rekkefølge som utkastet.</p>
+
+
+<div class="anbefaling-blokk">
+<h4>Kapittel 1 — Kapittel 1 — Bakgrunn, metode og prosess</h4>
+
+<p class="anbefaling-meta"><strong>Plassering i utkastet:</strong> Bakgrunn</p>
+
+<p class="anbefaling-utkast"><strong>Utkastets formulering (sammenfattet):</strong> Innledende kapittel som beskriver retningslinjens omfang (felles for langvarig utmattelse inkl. ME/CFS), arbeidsprosessen, evidensgrunnlaget og avgrensning mot andre tilstander. Ikke en anbefaling, men premissleverandør for hele utkastet.</p>
+
+<div class="tall-rad">
+<div class="tall-celle st"><span class="tall">5</span><span class="etikett">Støtter</span></div>
+<div class="tall-celle sf"><span class="tall">18</span><span class="etikett">Støtter med forbehold</span></div>
+<div class="tall-celle kr"><span class="tall">93</span><span class="etikett">Kritisk</span></div>
+<div class="tall-celle av"><span class="tall">194</span><span class="etikett">Avviser</span></div>
+<div class="tall-celle ib"><span class="tall">148</span><span class="etikett">Ikke berørt</span></div>
+</div>
+
+<p class="tall-tolkning"><em>Av de 310 innspillene som berører dette området: 93% er negative (kritisk eller avviser), 7% er positive (støtter eller med forbehold).</em></p>
+
+<h5>Hva de kritiske og avvisende fordrer</h5>
+<ul class="fordrer-liste">
+
+<li>Egen, selvstendig retningslinje for ME/CFS adskilt fra langvarig utmattelse (248 innspill — det mest dominerende kravet i hele høringen)</li>
+<li>Tydelig diagnostisk skille mellom ME/CFS og uspesifikk langvarig utmattelse — ikke felles ramme for tilstander med ulik patofysiologi</li>
+<li>Forankring i ICD-10 G93.3 / ICD-11 8E49 som diagnostisk kode</li>
+<li>Bredere kunnskapsgrunnlag som inkluderer internasjonal biomedisinsk ME-forskning (NICE 2021, WHO, IOM-rapporten)</li>
+<li>Kritikk av arbeidsgruppens sammensetning — overrepresentasjon av Recovery Norge og NKT, underrepresentasjon av biomedisinske miljøer som Haukeland (Fluge/Mella)</li>
+<li>Avvising av biopsykososial modell som overordnet rammeverk</li>
+</ul>
+<h5>Hva dissensbrevene fordrer</h5><ul class="fordrer-liste dissens">
+<li>Norges ME-forening (id 112): retningslinjen vil verken heve kompetanse eller gi bedre oppfølging av ME-syke — refererer Gulating-rettsak som dokumenterer skade</li>
+<li>Norsk Covidforening (id 270): utkastet sammenstiller tre ICD-11-diagnoser (8E49, RA02, MG22) uten faglig begrunnelse — avvik fra NICE/WHO</li>
+<li>ME-foreldrene (id 398): det opprinnelige NICE-mandatet og todelte forløpet ble forlatt underveis i prosessen</li>
+</ul>
+<h5>Det strukturelle valget</h5>
+<p class="valg-tekst">Skal kapittel 1 forutsette én felles tilstand (langvarig utmattelse som overordnet kategori med ME/CFS som undergruppe), eller skal det forutsette flere distinkte tilstander som behandles parallelt? Dette valget definerer rammene for alle 12 anbefalinger som følger.</p>
+
+</div>
+
+
+<div class="anbefaling-blokk">
+<h4>Anbefaling 1 — Fastlegen som koordinator og helhetlig oppfølging</h4>
+
+<p class="anbefaling-meta"><strong>Plassering i utkastet:</strong> Kap 2</p>
+
+<p class="anbefaling-utkast"><strong>Utkastets formulering (sammenfattet):</strong> Fastlegen bør ha det helhetlige ansvaret for utredning og oppfølging av pasienter med langvarig utmattelse, og koordinere kontakt med øvrige tjenester.</p>
+
+<div class="tall-rad">
+<div class="tall-celle st"><span class="tall">18</span><span class="etikett">Støtter</span></div>
+<div class="tall-celle sf"><span class="tall">38</span><span class="etikett">Støtter med forbehold</span></div>
+<div class="tall-celle kr"><span class="tall">156</span><span class="etikett">Kritisk</span></div>
+<div class="tall-celle av"><span class="tall">7</span><span class="etikett">Avviser</span></div>
+<div class="tall-celle ib"><span class="tall">239</span><span class="etikett">Ikke berørt</span></div>
+</div>
+
+<p class="tall-tolkning"><em>Av de 219 innspillene som berører dette området: 74% er negative (kritisk eller avviser), 26% er positive (støtter eller med forbehold).</em></p>
+
+<h5>Hva de kritiske og avvisende fordrer</h5>
+<ul class="fordrer-liste">
+
+<li>Fastlegen kan ikke ha helhetlig ansvar uten ME-spesifikk kompetanse — krav om obligatorisk PEM-opplæring for fastleger</li>
+<li>Spesialist (ikke fastlege) må stille selve ME/CFS-diagnosen — fastlegen mangler kompetanse på Canadakriteriene</li>
+<li>Implementeringen forutsetter at fastlegene faktisk har tid og kapasitet — for tiden ikke realistisk</li>
+<li>Skille mellom oppfølging av langvarig utmattelse og ME/CFS — anbefalingen kan ikke være lik for begge</li>
+</ul>
+<h5>Hva dissensbrevene fordrer</h5><ul class="fordrer-liste dissens">
+<li>Fag-dissens (Herner, Jøssang, Prydz): fastlegen må også formidle tilfriskningsperspektiv og motvirke pasientens katastrofetenkning</li>
+<li>Bruker-dissens (ME-foreningen, ME-foreldrene): fastlegen må respektere PEM som styrende — ikke presse pasienten til å overskride tålegrense</li>
+</ul>
+<h5>Det strukturelle valget</h5>
+<p class="valg-tekst">Skal anbefalingen presisere hva fastlegen konkret må ha kompetanse på, eller forbli prinsipiell? Hvis presisering: hvilket innhold — biomedisinsk PEM-forståelse (A-leiren) eller nevroplastisk/tilfriskningsorientering (fag-dissens)?</p>
+
+</div>
+
+
+<div class="anbefaling-blokk">
+<h4>Anbefaling 2 — Helhetlig kartlegging av symptomer og funksjon</h4>
+
+<p class="anbefaling-meta"><strong>Plassering i utkastet:</strong> Kap 2</p>
+
+<p class="anbefaling-utkast"><strong>Utkastets formulering (sammenfattet):</strong> Fastlegen bør gjennomføre en helhetlig kartlegging av pasientens symptomer, funksjon og psykososiale forhold.</p>
+
+<div class="tall-rad">
+<div class="tall-celle st"><span class="tall">28</span><span class="etikett">Støtter</span></div>
+<div class="tall-celle sf"><span class="tall">42</span><span class="etikett">Støtter med forbehold</span></div>
+<div class="tall-celle kr"><span class="tall">84</span><span class="etikett">Kritisk</span></div>
+<div class="tall-celle av"><span class="tall">11</span><span class="etikett">Avviser</span></div>
+<div class="tall-celle ib"><span class="tall">293</span><span class="etikett">Ikke berørt</span></div>
+</div>
+
+<p class="tall-tolkning"><em>Av de 165 innspillene som berører dette området: 58% er negative (kritisk eller avviser), 42% er positive (støtter eller med forbehold).</em></p>
+
+<h5>Hva de kritiske og avvisende fordrer</h5>
+<ul class="fordrer-liste">
+
+<li>Kartleggingen må eksplisitt operasjonalisere PEM (12–72 timers forsinket forverring, varighet, alvorlighetsgrad) som obligatorisk del</li>
+<li>Kartlegging av psykososiale forhold må ikke erstatte somatisk utredning eller bli inngang til psykologisering</li>
+<li>FUNCAP-skjema eller tilsvarende ME-spesifikt verktøy — ikke generiske utmattelsesskjemaer</li>
+<li>For alvorlig syke pasienter må kartleggingen tilrettelegges (hjemmebesøk, korte sesjoner, pårørende som proxy)</li>
+</ul>
+<h5>Hva dissensbrevene fordrer</h5><ul class="fordrer-liste dissens">
+<li>Fag-dissens (Nerli): kartleggingen må også fange opp nocebo-effekter og pasientens sykdomsoppfatning</li>
+<li>Bruker-dissens (Norsk Covidforening): post-COVID må kartlegges med samme metodikk som ME/CFS når PEM er til stede</li>
+</ul>
+<h5>Det strukturelle valget</h5>
+<p class="valg-tekst">Skal kartleggingen være sykdomsspesifikk (ulike skjemaer for ulike tilstander) eller transdiagnostisk (én helhetlig kartlegging)? Valget får konsekvenser for hvilke verktøy som anbefales og hvordan PEM identifiseres.</p>
+
+</div>
+
+
+<div class="anbefaling-blokk">
+<h4>Anbefaling 3 — Fastlegens igangsettelse av tiltak</h4>
+
+<p class="anbefaling-meta"><strong>Plassering i utkastet:</strong> Kap 2</p>
+
+<p class="anbefaling-utkast"><strong>Utkastets formulering (sammenfattet):</strong> Fastlegen kan igangsette tiltak basert på funksjon og symptombilde uten å vente på spesialistdiagnose.</p>
+
+<div class="tall-rad">
+<div class="tall-celle st"><span class="tall">18</span><span class="etikett">Støtter</span></div>
+<div class="tall-celle sf"><span class="tall">44</span><span class="etikett">Støtter med forbehold</span></div>
+<div class="tall-celle kr"><span class="tall">111</span><span class="etikett">Kritisk</span></div>
+<div class="tall-celle av"><span class="tall">11</span><span class="etikett">Avviser</span></div>
+<div class="tall-celle ib"><span class="tall">274</span><span class="etikett">Ikke berørt</span></div>
+</div>
+
+<p class="tall-tolkning"><em>Av de 184 innspillene som berører dette området: 66% er negative (kritisk eller avviser), 34% er positive (støtter eller med forbehold).</em></p>
+
+<h5>Hva de kritiske og avvisende fordrer</h5>
+<ul class="fordrer-liste">
+
+<li>Fastlegen må ikke igangsette gradert aktivitetsøkning eller kognitiv terapi for pasienter med PEM — risiko for varig forverring</li>
+<li>Tiltak for ME/CFS-pasienter må styres av Canadakriterie-diagnose, ikke generisk funksjonsvurdering</li>
+<li>Pacing/aktivitetsavpasning innenfor tålegrense som standard for pasienter med PEM</li>
+<li>NAV-relevans må sikres — tiltak fastlegen igangsetter må kommuniseres til trygdesystem</li>
+</ul>
+<h5>Hva dissensbrevene fordrer</h5><ul class="fordrer-liste dissens">
+<li>Fag-dissens: fastlegen må også kunne igangsette eksponering/aktivitetstrening for pasienter uten klar PEM</li>
+<li>Bruker-dissens: fastlegen må fraråde aktivitetsøkning eksplisitt for ME/CFS-pasienter</li>
+</ul>
+<h5>Det strukturelle valget</h5>
+<p class="valg-tekst">Skal anbefalingen åpne for at fastlegen igangsetter tiltak uten spesialistdiagnose, eller forutsette diagnostisk avklaring først? Ved PEM-tilstedeværelse er feilbehandling potensielt skadelig — valget handler om å balansere tidlig handling mot risiko for feilstart.</p>
+
+</div>
+
+
+<div class="anbefaling-blokk">
+<h4>Anbefaling 4 — Canadakriteriene for diagnostisering av ME/CFS hos voksne</h4>
+
+<p class="anbefaling-meta"><strong>Plassering i utkastet:</strong> Kap 2</p>
+
+<p class="anbefaling-utkast"><strong>Utkastets formulering (sammenfattet):</strong> For diagnostisering av ME/CFS hos voksne anbefales Canadakriteriene.</p>
+
+<div class="tall-rad">
+<div class="tall-celle st"><span class="tall">102</span><span class="etikett">Støtter</span></div>
+<div class="tall-celle sf"><span class="tall">53</span><span class="etikett">Støtter med forbehold</span></div>
+<div class="tall-celle kr"><span class="tall">14</span><span class="etikett">Kritisk</span></div>
+<div class="tall-celle av"><span class="tall">7</span><span class="etikett">Avviser</span></div>
+<div class="tall-celle ib"><span class="tall">282</span><span class="etikett">Ikke berørt</span></div>
+</div>
+
+<p class="tall-tolkning"><em>Av de 176 innspillene som berører dette området: 12% er negative (kritisk eller avviser), 88% er positive (støtter eller med forbehold).</em></p>
+
+<h5>Hva de kritiske og avvisende fordrer</h5>
+<ul class="fordrer-liste">
+
+<li>Canadakriteriene må være obligatorisk standard, ikke valgfri — formuleringen &quot;anbefales&quot; er for svak (155 av 169 berørte vil ha enten klar støtte eller skjerping)</li>
+<li>Noen krever ICC-kriteriene eller Jason-kriterier for barn som strengere alternativ</li>
+<li>(Mindretall, primært B-leiren) Canadakriteriene er for snevre eller bør erstattes av IOM/NAM-kriteriene</li>
+<li>(Mindretall) PEM-spesifikt skille bør gå før Canadakriteriene — todelt forløp basert på PEM-tilstedeværelse</li>
+</ul>
+<h5>Hva dissensbrevene fordrer</h5><ul class="fordrer-liste dissens">
+<li>Bruker-dissens: Canadakriteriene må følges av operasjonell PEM-definisjon for å være kliniske brukbare</li>
+<li>Fag-dissens (Vestre Viken-aligned): Canadakriteriene er internasjonalt forlatt til fordel for IOM/NAM og NICE — Norge bør følge etter</li>
+</ul>
+<h5>Det strukturelle valget</h5>
+<p class="valg-tekst">Dette er den eneste anbefalingen i utkastet hvor flertallet av berørte innspill (155 av 176) er positive. Spørsmålet er ikke om Canadakriteriene, men hvor strengt formulert. Skal &quot;anbefales&quot; oppgraderes til &quot;skal&quot; eller forbli en faglig retning?</p>
+
+</div>
+
+
+<div class="anbefaling-blokk">
+<h4>Anbefaling 5 — Aktivitetsregulering</h4>
+
+<p class="anbefaling-meta"><strong>Plassering i utkastet:</strong> Kap 2</p>
+
+<p class="anbefaling-utkast"><strong>Utkastets formulering (sammenfattet):</strong> Pasienten bør reguleres aktivitet uten å skape overbelastning, med veiledning fra helsepersonell.</p>
+
+<div class="tall-rad">
+<div class="tall-celle st"><span class="tall">37</span><span class="etikett">Støtter</span></div>
+<div class="tall-celle sf"><span class="tall">38</span><span class="etikett">Støtter med forbehold</span></div>
+<div class="tall-celle kr"><span class="tall">137</span><span class="etikett">Kritisk</span></div>
+<div class="tall-celle av"><span class="tall">52</span><span class="etikett">Avviser</span></div>
+<div class="tall-celle ib"><span class="tall">194</span><span class="etikett">Ikke berørt</span></div>
+</div>
+
+<p class="tall-tolkning"><em>Av de 264 innspillene som berører dette området: 72% er negative (kritisk eller avviser), 28% er positive (støtter eller med forbehold).</em></p>
+
+<h5>Hva de kritiske og avvisende fordrer</h5>
+<ul class="fordrer-liste">
+
+<li>Pacing (aktivitetsavpasning innenfor tålegrense) — ikke gradert aktivitetsøkning — for pasienter med PEM</li>
+<li>Eksplisitt frarådning av gradert treningsterapi (GET) og kognitiv adferdsterapi som behandling for ME/CFS</li>
+<li>Formuleringen &quot;uten å skape overbelastning&quot; må operasjonaliseres — uklart hva som regnes som overbelastning og hvem som vurderer</li>
+<li>Eksplisitt advarsel mot Lightning Process og lignende metoder</li>
+<li>Begrepet &quot;aktivitetsregulering&quot; må erstattes med &quot;aktivitetsavpasning&quot; eller &quot;energiøkonomisering&quot; — mer presis for PEM-pasienter</li>
+</ul>
+<h5>Hva dissensbrevene fordrer</h5><ul class="fordrer-liste dissens">
+<li>Fag-dissens (samtlige fire): aktivitetsregulering må også åpne for forsiktig økning der pasienten tåler det — ikke kun begrensning</li>
+<li>Bruker-dissens (ME-foreningen, Norsk Covidforening, ME-foreldrene): aktivitetsregulering for PEM-pasienter må primært handle om å holde seg under tålegrense — gradert økning er kontraindisert</li>
+</ul>
+<h5>Det strukturelle valget</h5>
+<p class="valg-tekst">Skal anbefalingen forholde seg til at pacing og gradert aktivitetsøkning er gjensidig uforenelige tilnærminger for ME/CFS-pasienter med PEM, eller skal den forsøke å beholde begge som muligheter avhengig av pasienttype? Dette er den mest direkte konfliktlinjen mellom de to leirene.</p>
+
+</div>
+
+
+<div class="anbefaling-blokk">
+<h4>Anbefaling 6 — Tverrfaglig spesialistutredning</h4>
+
+<p class="anbefaling-meta"><strong>Plassering i utkastet:</strong> Kap 2</p>
+
+<p class="anbefaling-utkast"><strong>Utkastets formulering (sammenfattet):</strong> Pasienter med vedvarende utmattelse uten avklart årsak bør tilbys tverrfaglig spesialistutredning.</p>
+
+<div class="tall-rad">
+<div class="tall-celle st"><span class="tall">38</span><span class="etikett">Støtter</span></div>
+<div class="tall-celle sf"><span class="tall">32</span><span class="etikett">Støtter med forbehold</span></div>
+<div class="tall-celle kr"><span class="tall">59</span><span class="etikett">Kritisk</span></div>
+<div class="tall-celle av"><span class="tall">11</span><span class="etikett">Avviser</span></div>
+<div class="tall-celle ib"><span class="tall">318</span><span class="etikett">Ikke berørt</span></div>
+</div>
+
+<p class="tall-tolkning"><em>Av de 140 innspillene som berører dette området: 50% er negative (kritisk eller avviser), 50% er positive (støtter eller med forbehold).</em></p>
+
+<h5>Hva de kritiske og avvisende fordrer</h5>
+<ul class="fordrer-liste">
+
+<li>Tverrfaglig team må ha ME-spesifikk kompetanse — ikke generisk utmattelsesteam</li>
+<li>Spesifiserte fagprofesjoner: nevrolog/indremedisiner som leder, ikke psykolog/psykiater</li>
+<li>Utredning må inkludere POTS-testing (ortostatisk intoleranse), 2-dagers CPET der relevant, immunologisk panel</li>
+<li>Tilrettelagt utredning for alvorlig syke — hjemmebesøk eller telefon, ikke krav om frammøte</li>
+<li>Tilstrekkelig ressurser og ventetid må sikres — Røysumtunet som modell</li>
+</ul>
+<h5>Hva dissensbrevene fordrer</h5><ul class="fordrer-liste dissens">
+<li>Fag-dissens: tverrfaglig utredning må også inkludere psykologisk vurdering av sykdomsforståelse</li>
+<li>Bruker-dissens: tverrfaglig team for ME/CFS må ikke domineres av psykolog/psykiater — kompetanse på PEM som styrende</li>
+</ul>
+<h5>Det strukturelle valget</h5>
+<p class="valg-tekst">Skal &quot;tverrfaglig&quot; defineres med spesifikke profesjoner (somatisk dominans i A-leiren vs. balansert i fag-dissens), eller forbli åpent? Definisjonens innhold bestemmer hva pasienten faktisk møter.</p>
+
+</div>
+
+
+<div class="anbefaling-blokk">
+<h4>Anbefaling 7 — Virksomhetsleders ansvar for helsehjelp hjemme og i institusjon</h4>
+
+<p class="anbefaling-meta"><strong>Plassering i utkastet:</strong> Kap 3</p>
+
+<p class="anbefaling-utkast"><strong>Utkastets formulering (sammenfattet):</strong> Virksomhetsleder bør tilrettelegge for helsehjelp som er tilpasset alvorlig syke pasienter, både i hjemmet og i institusjon.</p>
+
+<div class="tall-rad">
+<div class="tall-celle st"><span class="tall">28</span><span class="etikett">Støtter</span></div>
+<div class="tall-celle sf"><span class="tall">25</span><span class="etikett">Støtter med forbehold</span></div>
+<div class="tall-celle kr"><span class="tall">66</span><span class="etikett">Kritisk</span></div>
+<div class="tall-celle av"><span class="tall">10</span><span class="etikett">Avviser</span></div>
+<div class="tall-celle ib"><span class="tall">329</span><span class="etikett">Ikke berørt</span></div>
+</div>
+
+<p class="tall-tolkning"><em>Av de 129 innspillene som berører dette området: 59% er negative (kritisk eller avviser), 41% er positive (støtter eller med forbehold).</em></p>
+
+<h5>Hva de kritiske og avvisende fordrer</h5>
+<ul class="fordrer-liste">
+
+<li>Virksomhetsleder må ha plikt (ikke bare ansvar) til å tilrettelegge for hjemmebasert helsehjelp for sengeliggende ME-pasienter</li>
+<li>Konkrete kompetansekrav for personell som yter helsehjelp i hjemmet — PEM-bevissthet, lyd/lys-skjerming</li>
+<li>Røysumtunet-modellen som referanse — eneste spesialiserte tilbud for svært alvorlig ME i Norge</li>
+<li>BPA (brukerstyrt personlig assistent) må eksplisitt nevnes som verktøy</li>
+<li>Finansiering og kommunal kapasitet må sikres — uten ressursoverføring blir anbefalingen tom</li>
+</ul>
+<h5>Hva dissensbrevene fordrer</h5><ul class="fordrer-liste dissens">
+<li>Bruker-dissens (ME-foreldrene, ME-foreningen): virksomhetsleder må sikre at personell respekterer pasientens PEM-grenser, ikke presser frem aktivitet</li>
+</ul>
+<h5>Det strukturelle valget</h5>
+<p class="valg-tekst">Skal anbefalingen være prinsipiell (virksomhetsleder &quot;bør tilrettelegge&quot;) eller operasjonell (spesifikke krav til kompetanse, finansiering, kapasitet)? Uten det operasjonelle blir anbefalingen ofte ikke gjennomført i praksis.</p>
+
+</div>
+
+
+<div class="anbefaling-blokk">
+<h4>Anbefaling 8 — Kommunens tillitsskapende tiltak (skal-formulering)</h4>
+
+<p class="anbefaling-meta"><strong>Plassering i utkastet:</strong> Kap 3</p>
+
+<p class="anbefaling-utkast"><strong>Utkastets formulering (sammenfattet):</strong> Kommunen skal iverksette tillitsskapende tiltak overfor pasienter som ikke ønsker å ta imot helsehjelp.</p>
+
+<div class="tall-rad">
+<div class="tall-celle st"><span class="tall">17</span><span class="etikett">Støtter</span></div>
+<div class="tall-celle sf"><span class="tall">10</span><span class="etikett">Støtter med forbehold</span></div>
+<div class="tall-celle kr"><span class="tall">74</span><span class="etikett">Kritisk</span></div>
+<div class="tall-celle av"><span class="tall">20</span><span class="etikett">Avviser</span></div>
+<div class="tall-celle ib"><span class="tall">337</span><span class="etikett">Ikke berørt</span></div>
+</div>
+
+<p class="tall-tolkning"><em>Av de 121 innspillene som berører dette området: 78% er negative (kritisk eller avviser), 22% er positive (støtter eller med forbehold).</em></p>
+
+<h5>Hva de kritiske og avvisende fordrer</h5>
+<ul class="fordrer-liste">
+
+<li>Tillitsskapende tiltak må ikke bli inngang til tvang eller press mot pasienter som motsetter seg helsehjelp</li>
+<li>Skal-formuleringen («kommunen skal») skaper rettighet — implementeringskonsekvenser må klargjøres</li>
+<li>Pasientens rett til å avvise helsehjelp må respekteres (autonomi)</li>
+<li>For ME-pasienter kan «tillitsskapende» bli en eufemisme for å overkjøre pasientens vurdering av egen tålegrense</li>
+<li>Barnevern-koblinger må klargjøres — risiko for Munchausen by proxy-mistanker mot ME-foreldre</li>
+</ul>
+<h5>Hva dissensbrevene fordrer</h5><ul class="fordrer-liste dissens">
+<li>Bruker-dissens (Trygg Barndom-aligned): tillitsskapende tiltak overfor barn med ME må ha strenge rettssikkerhetsgarantier</li>
+</ul>
+<h5>Det strukturelle valget</h5>
+<p class="valg-tekst">Skal-formuleringen er den eneste i utkastet — alle andre anbefalinger er bør. Dette gjør tillitsskapende tiltak juridisk forpliktende. Skal denne styrken beholdes, eller modereres? Hvis beholdes: hvilke konkrete rettssikkerhetsmekanismer må til for å unngå overgrep mot pasienter som vurderer ulike behandlinger som skadelige?</p>
+
+</div>
+
+
+<div class="anbefaling-blokk">
+<h4>Anbefaling 9 — Fastlegens rolle for barn og unge</h4>
+
+<p class="anbefaling-meta"><strong>Plassering i utkastet:</strong> Kap 4</p>
+
+<p class="anbefaling-utkast"><strong>Utkastets formulering (sammenfattet):</strong> Fastlegen bør ha en sentral rolle i oppfølgingen av barn og unge med langvarig utmattelse.</p>
+
+<div class="tall-rad">
+<div class="tall-celle st"><span class="tall">22</span><span class="etikett">Støtter</span></div>
+<div class="tall-celle sf"><span class="tall">17</span><span class="etikett">Støtter med forbehold</span></div>
+<div class="tall-celle kr"><span class="tall">54</span><span class="etikett">Kritisk</span></div>
+<div class="tall-celle av"><span class="tall">7</span><span class="etikett">Avviser</span></div>
+<div class="tall-celle ib"><span class="tall">358</span><span class="etikett">Ikke berørt</span></div>
+</div>
+
+<p class="tall-tolkning"><em>Av de 100 innspillene som berører dette området: 61% er negative (kritisk eller avviser), 39% er positive (støtter eller med forbehold).</em></p>
+
+<h5>Hva de kritiske og avvisende fordrer</h5>
+<ul class="fordrer-liste">
+
+<li>Fastlegen må ha særskilt kompetanse på ME hos barn — Jason-kriteriene som diagnostisk støtte</li>
+<li>Forsiktig skoleretur uten press — PEM hos barn forverres lett av skolepåtrykk</li>
+<li>Eksplisitt vern mot Munchausen by proxy-mistanker (FAFO-rapport: 1 av 5 ME-foreldre er anklaget)</li>
+<li>Skille mellom barn med PEM (ME/CFS) og barn med utbrenthet/depresjon — krever ulike tiltak</li>
+</ul>
+<h5>Hva dissensbrevene fordrer</h5><ul class="fordrer-liste dissens">
+<li>Fag-dissens (særlig Jøssang/Prydz/BUP CL Haukeland): fastlegen for barn må også fremme aktivitet og motvirke overdreven hvile</li>
+<li>Bruker-dissens (ME-foreldrene): fastlegen må ikke henvise til psykolog/psykiater før somatisk utredning er fullført</li>
+</ul>
+<h5>Det strukturelle valget</h5>
+<p class="valg-tekst">Skal anbefalingen for fastlege ved barn være den samme som for voksne, eller spesifikt tilpasset utviklingsperspektivet (skole, foreldrerolle, barnevernsbekymringer)? Risikoen for skade ved feilbehandling er høyere hos barn, og rettssikkerhetsperspektivet sterkere.</p>
+
+</div>
+
+
+<div class="anbefaling-blokk">
+<h4>Anbefaling 10 — Spesialisthelsetjenestens rolle for barn</h4>
+
+<p class="anbefaling-meta"><strong>Plassering i utkastet:</strong> Kap 4</p>
+
+<p class="anbefaling-utkast"><strong>Utkastets formulering (sammenfattet):</strong> Barn og unge bør henvises til spesialisthelsetjenesten for utredning ved vedvarende utmattelse uten avklart årsak.</p>
+
+<div class="tall-rad">
+<div class="tall-celle st"><span class="tall">19</span><span class="etikett">Støtter</span></div>
+<div class="tall-celle sf"><span class="tall">21</span><span class="etikett">Støtter med forbehold</span></div>
+<div class="tall-celle kr"><span class="tall">46</span><span class="etikett">Kritisk</span></div>
+<div class="tall-celle av"><span class="tall">6</span><span class="etikett">Avviser</span></div>
+<div class="tall-celle ib"><span class="tall">366</span><span class="etikett">Ikke berørt</span></div>
+</div>
+
+<p class="tall-tolkning"><em>Av de 92 innspillene som berører dette området: 57% er negative (kritisk eller avviser), 43% er positive (støtter eller med forbehold).</em></p>
+
+<h5>Hva de kritiske og avvisende fordrer</h5>
+<ul class="fordrer-liste">
+
+<li>Henvisning til pediatrisk spesialist med ME-kompetanse — ikke BUP/psykolog</li>
+<li>Tidlig henvisning ved PEM-tegn — ikke vente på langvarig utmattelse</li>
+<li>Spesialist må kunne sette ICD-10 G93.3 (fastlege kan ikke i dagens system)</li>
+<li>Spesialist må forstå at barns ME er somatisk, ikke skolevegring eller emosjonell forstyrrelse</li>
+</ul>
+<h5>Hva dissensbrevene fordrer</h5><ul class="fordrer-liste dissens">
+<li>Fag-dissens (BUP CL Haukeland, Helse Nord-Trøndelag): pediatrisk spesialistutredning må også inkludere psykiatrisk vurdering for å identifisere overlappende tilstander</li>
+<li>Bruker-dissens (ME-foreldrene): barnenevrologisk kompetanse må prioriteres framfor barnepsykiatrisk</li>
+</ul>
+<h5>Det strukturelle valget</h5>
+<p class="valg-tekst">Hvilken type spesialist skal være primær — pediater (somatisk) eller BUP (psykiatrisk)? Valget speiler den grunnleggende uenigheten om hva ME hos barn er.</p>
+
+</div>
+
+
+<div class="anbefaling-blokk">
+<h4>Anbefaling 11 — Legens ansvar når barn ikke kommer til konsultasjon</h4>
+
+<p class="anbefaling-meta"><strong>Plassering i utkastet:</strong> Kap 4</p>
+
+<p class="anbefaling-utkast"><strong>Utkastets formulering (sammenfattet):</strong> Lege bør oppsøke barn som ikke kommer til konsultasjon, ev. via hjemmebesøk eller annen tilrettelagt kontakt.</p>
+
+<div class="tall-rad">
+<div class="tall-celle st"><span class="tall">24</span><span class="etikett">Støtter</span></div>
+<div class="tall-celle sf"><span class="tall">26</span><span class="etikett">Støtter med forbehold</span></div>
+<div class="tall-celle kr"><span class="tall">44</span><span class="etikett">Kritisk</span></div>
+<div class="tall-celle av"><span class="tall">7</span><span class="etikett">Avviser</span></div>
+<div class="tall-celle ib"><span class="tall">357</span><span class="etikett">Ikke berørt</span></div>
+</div>
+
+<p class="tall-tolkning"><em>Av de 101 innspillene som berører dette området: 50% er negative (kritisk eller avviser), 50% er positive (støtter eller med forbehold).</em></p>
+
+<h5>Hva de kritiske og avvisende fordrer</h5>
+<ul class="fordrer-liste">
+
+<li>Legen må oppsøke alvorlig syke barn hjemme — kan ikke kreve frammøte</li>
+<li>Hjemmebesøk må tilrettelegges for PEM (kort varighet, dempet lys/lyd)</li>
+<li>Legen må ha kompetanse til å vurdere PEM og ikke feiltolke unngåelse som skolevegring</li>
+<li>Klare rutiner for legens involvering når barn fjernes fra skole pga sykdom — forebygging av barnevernssaker</li>
+</ul>
+<h5>Hva dissensbrevene fordrer</h5><ul class="fordrer-liste dissens">
+<li>Bruker-dissens (ME-foreldrene, Trygg Barndom): legens oppsøkende ansvar må også beskytte mot tvangsmessig skoleretur og urettmessige barnevernsinngrep</li>
+</ul>
+<h5>Det strukturelle valget</h5>
+<p class="valg-tekst">Skal anbefalingen pålegge legen plikt til oppsøkende kontakt (sterk forpliktelse, men ressurskrevende), eller forbli en anbefaling? Uten plikt er det dokumentert at alvorlig syke barn ikke får legekontakt i månedsvis.</p>
+
+</div>
+
+
+<div class="anbefaling-blokk">
+<h4>Anbefaling 12 — Helsepersonell og helsehjelp for barn i hjemmet</h4>
+
+<p class="anbefaling-meta"><strong>Plassering i utkastet:</strong> Kap 4</p>
+
+<p class="anbefaling-utkast"><strong>Utkastets formulering (sammenfattet):</strong> Helsepersonell bør tilrettelegge for at barn med alvorlig sykdom kan motta helsehjelp i hjemmet.</p>
+
+<div class="tall-rad">
+<div class="tall-celle st"><span class="tall">23</span><span class="etikett">Støtter</span></div>
+<div class="tall-celle sf"><span class="tall">20</span><span class="etikett">Støtter med forbehold</span></div>
+<div class="tall-celle kr"><span class="tall">43</span><span class="etikett">Kritisk</span></div>
+<div class="tall-celle av"><span class="tall">5</span><span class="etikett">Avviser</span></div>
+<div class="tall-celle ib"><span class="tall">367</span><span class="etikett">Ikke berørt</span></div>
+</div>
+
+<p class="tall-tolkning"><em>Av de 91 innspillene som berører dette området: 53% er negative (kritisk eller avviser), 47% er positive (støtter eller med forbehold).</em></p>
+
+<h5>Hva de kritiske og avvisende fordrer</h5>
+<ul class="fordrer-liste">
+
+<li>Helsepersonell må kunne håndtere svært alvorlig syke barn i hjemmet uten å presse aktivitet</li>
+<li>Lyd-, lys- og berøringsskjerming må forstås som medisinsk nødvendig — ikke som overbeskyttelse</li>
+<li>Pårørende (særlig mødre) må ikke automatisk mistenkes for å påføre barnet sykdom</li>
+<li>Tverrfaglig hjemmebasert tilbud — fysioterapeut, ergoterapeut, sykepleier med ME-kompetanse</li>
+<li>Skole/utdanning må tilrettelegges hjemme uten frammøtekrav for sengeliggende barn</li>
+</ul>
+<h5>Hva dissensbrevene fordrer</h5><ul class="fordrer-liste dissens">
+<li>Bruker-dissens (ME-foreldrene): helsehjelp i hjemmet må respektere foreldrenes erfaring og ikke overstyre dem</li>
+<li>Fag-dissens (BUP CL Haukeland): helsepersonell må også vurdere familiens samspillsmønstre som mulig opprettholdende faktor</li>
+</ul>
+<h5>Det strukturelle valget</h5>
+<p class="valg-tekst">Den dypeste motsetningen mellom leirene gjelder barn: fag-dissens ser ofte familien som mulig årsak/opprettholdende faktor, bruker-dissens ser familien som primær ressurs. Anbefalingen må velge perspektiv eller eksplisitt holde dem åpne — sistnevnte gir vag implementering.</p>
+
+</div>
+
+
+<h3>Avslutning — hva som ikke kan kompromisses bort</h3>
+
+<p>Når innspillene leses samlet, tegner det seg et bilde av syv strukturelle valg som ikke kan løses ved gradvise justeringer av utkastet. De er gjensidig forbundne: et valg på ett punkt får konsekvenser for de andre.</p>
+
+<p>Den biomedisinske linjen (337 av 458 innspill, eller 73,6%) krever konsekvent én retning: egen retningslinje for ME/CFS med PEM som styrende kriterium, Canadakriteriene som obligatorisk standard, pacing istedenfor gradert aktivitetsøkning, og NICE 2021 som internasjonal referanse. Denne linjen er internt konsistent — den ene anbefalingen forutsetter de andre.</p>
+
+<p>Den biopsykososiale linjen (58 av 458 innspill, eller 12,7% — særlig representert ved fag-dissensen, FHI, NKT, Karlsonpsykologene, Recovery Norge og enkelte helseforetak) krever motsatt: felles retningslinje, biopsykososial forklaringsmodell, åpning for aktivitetsøkning og kognitiv tilnærming, tilfriskningsperspektiv.</p>
+
+<p>Mellom disse to leirene finnes en pragmatisk midtgruppe (58 av 458, eller 12,7%) som primært peker på operasjonelle problemer — fastlegekapasitet, finansiering, samhandling — uten å ta klar side i de paradigmatiske spørsmålene.</p>
+
+<p>Den fundamentale observasjonen som denne kartleggingen viser er at <strong>Helsedirektoratet ikke kan tilfredsstille begge leirene samtidig</strong>. Forsøket på en felles midtposisjon — som er utkastets utgangspunkt — er nettopp det fag- og bruker-dissensene angriper fra hver sin side. Det er ikke et kompromiss begge parter kan leve med; det er en konstruksjon ingen av dem aksepterer.</p>
+
+<p>Tallene viser hvilken retning som har det største høringstrykket bak seg. Vurderingen av hvilken retning som har det sterkeste faglige grunnlaget — etter NICE/WHO-tradition, etter biopsykososial tradering, eller etter en tredje vei — er Helsedirektoratets fagansvar å gjøre. Denne kartleggingen gir grunnlaget; den tar ikke valget.</p>
 
 </section>
 
