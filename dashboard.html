@@ -376,6 +376,13 @@ footer {
   .tall-celle .etikett { font-size: 9px; }
 }
 
+
+.oppdatert-markor { background: var(--farge-strek-svak); border-left: 3px solid var(--farge-aksent); padding: 10px 16px; margin: 16px 0 24px 0; border-radius: 4px; font-size: 14px; color: var(--farge-tekst); }
+
+.asymmetri-boks { background: #fef9f0; border: 1px solid #e8d5a8; padding: 16px 20px; margin: 16px 0 24px 0; border-radius: 4px; }
+.asymmetri-boks p { margin: 8px 0; }
+.asymmetri-boks p:first-child { margin-top: 0; }
+.asymmetri-boks p:last-child { margin-bottom: 0; }
 </style>
 </head>
 <body>
@@ -407,6 +414,10 @@ footer {
 <h2>Hva er dette?</h2>
 
 <p class="ingress">Helsedirektoratet publiserte 4. februar 2026 et utkast til ny nasjonal faglig retningslinje for langvarig utmattelse inkludert ME/CFS, og sendte det på høring med frist 4. mai 2026. Den nye retningslinjen er en revisjon av den tidligere «Nasjonal veileder for pasienter med CFS/ME», men inkluderer en større pasientpopulasjon — langvarig utmattelse generelt, ikke bare ME/CFS. Innen fristen kom det inn 458 høringsinnspill fra privatpersoner, helseinstitusjoner, pasientorganisasjoner, kommuner og forskningsmiljøer — samt ett opprop med 3034 underskrifter. Helsedirektoratet planlegger å ferdigbehandle retningslinjen 10. august 2026. Dette dashboardet gir en strukturert oversikt over hva som ble sagt, hvem som sa det, og hvilke konfliktlinjer som tegner seg i materialet. For detaljert beskrivelse av høringsprosessen, se egen fane <em>Bakgrunn og prosess</em>.</p>
+
+<div class="oppdatert-markor">
+<strong>Status:</strong> Analyse ferdigstilt 4. mai 2026 (samme dag som høringsfristen). Dashboardet er sist oppdatert 14. mai 2026 og kan endres ved nye funn eller korrigeringer.
+</div>
 
 <h3>Sentrale tall i datasettet</h3>
 
@@ -446,6 +457,18 @@ footer {
 <p class="statkort-tall">126</p>
 <p class="statkort-tekst">Identiske eller nær-identiske standardformuleringer</p>
 </div>
+</div>
+
+<h3>Hvordan tallene må forstås</h3>
+
+<p>Tallene over speiler trykket i materialet, ikke nødvendigvis det faglige landskapet. Dette skillet er viktig:</p>
+
+<div class="asymmetri-boks">
+<p><strong>Materialet er asymmetrisk mobilisert.</strong> Den biomedisinske siden er sterkt og organisert representert i høringen — gjennom 126 mal-instanser distribuert via Nina E. Steinkopfs nettverk (27,5 prosent av samtlige innspill), gjennom et opprop med 3034 underskrifter, og gjennom et stort antall enkeltstemmer fra pasienter og pårørende. Den biopsykososiale siden er primært representert gjennom institusjonelle aktører (FHI, NKT, deler av spesialisthelsetjenesten, Recovery Norge, Karlsonpsykologene) og fag-dissenser fra arbeidsgruppen, men har ikke en tilsvarende mobilisert grasrot i materialet.</p>
+
+<p>Det betyr at <strong>fordelingen 73,6 / 12,7 / 12,7 prosent ikke kan tolkes som «hva fagfeltet mener»</strong>. Den viser hva høringen samlet seg om — og høringer favoriserer som regel den siden som er best organisert for kollektiv handling. Helsedirektoratets oppgave er ikke å telle stemmer, men å gjøre en faglig vurdering der både kvantitativt høringstrykk, organisert representasjon og faglig substans inngår.</p>
+
+<p>Dashboardet rapporterer trykket nøyaktig — fordi det er det høringen har gitt oss — men leseren bør holde fast ved at <strong>antall stemmer ikke er det samme som faglig styrke</strong>.</p>
 </div>
 
 <h3>Omfang av gjennomgangen</h3>
@@ -2698,6 +2721,32 @@ tegnRader();
 <p style="margin: 8px 0 0 0;">Innholdet i de tre innspillene er kodet på lik linje med alle andre innspill i datasettet, med samme prosedyre og samme kvalitetsmarkører.</p>
 </div>
 
+<h3>Én-koder-begrensningen</h3>
+
+<p>All koding av de 458 innspillene er gjort av én person — Halvard Nordang. Det er en metodisk svakhet som leseren bør være klar over, og som vi her er åpne om.</p>
+
+<p>I akademisk kvalitativ forskning er det vanlig praksis å bruke <strong>dobbel-koding</strong>: to uavhengige kodere koder de samme tekstene, og man måler graden av overensstemmelse (inter-rater reliability) som et mål på hvor robust kodingen er. Dette er ikke gjort her — kapasitetsmessig har det ikke vært mulig innenfor det tidsvinduet høringen har gitt.</p>
+
+<p>Konsekvensene av én-koder-tilnærmingen er reelle:</p>
+
+<ul>
+<li><strong>Systematisk bias:</strong> Hvis koderen tolker tvetydige formuleringer på en konsekvent måte, kan denne tolkningen påvirke fordelingen i én retning uten at det er synlig i tallene. Med 458 grensetilfeller blir summen av små individuelle valg betydelig.</li>
+<li><strong>Kategori-drift:</strong> Definisjonene av A_klar, A_modifisert, pragmatisk og B_modifisert har blitt utviklet gjennom kodingen — det er en risiko for at tidlige og sene innspill ikke er kodet etter helt samme strenghet, selv om kodeboken er forsøkt holdt konstant.</li>
+<li><strong>Manglende kalibrering:</strong> Det finnes ingen ekstern instans som kan bekrefte at andre, med samme kodebok, ville plassert innspillene i samme kategorier.</li>
+</ul>
+
+<p>For å motvirke disse begrensningene er følgende tiltak gjort:</p>
+
+<ul>
+<li><strong>Eksplisitt kodebok</strong> som ligger åpent tilgjengelig (i datasettet) og som beskriver hvordan grenseverdier skal vurderes.</li>
+<li><strong>Maskinlesbare kildedata</strong> — hele kodingen er publisert som <code>alle_kodinger.json</code> og <code>alle_kodinger.csv</code> slik at andre kan etterprøve, gjenkode med justerte kriterier, eller utfordre konkrete vurderinger.</li>
+<li><strong>Eksplisitt markering av tvilstilfeller</strong> via kvalitetsfeltet og merknadsfeltet — der koderen var i tvil, er det dokumentert hvorfor en gitt vurdering ble tatt.</li>
+<li><strong>Konservativ tilnærming i grensetilfeller</strong> — der det har vært tvil mellom A_klar og A_modifisert, eller mellom B_klar og B_modifisert, er den mildere kategorien valgt for å unngå overdrevet polarisering.</li>
+<li><strong>Aggregert presentasjon</strong> — analysen bygger på samlede mønstre på tvers av mange innspill, ikke på enkeltinnsenderes posisjonering. Et eventuelt feil-kodet enkeltinnspill påvirker dermed ikke konklusjonene merkbart.</li>
+</ul>
+
+<p>Likevel: leseren bør lese tallene med dette forbeholdet i bakhodet. Et resultat på 73,6 prosent biomedisinsk linje er robust selv om noen prosentpoeng skulle gå tapt i koderbias — men en mer presis fordeling enn dette krever metoder vi ikke har anvendt. Dashboardet er publisert med åpne kildedata nettopp for å gjøre slik etterprøving mulig.</p>
+
 <h3>Kvalitetssikring</h3>
 
 <p>Følgende kvalitetssikringstiltak er gjort:</p>
@@ -2740,7 +2789,7 @@ tegnRader();
 </main>
 
 <footer>
-Analyse av høringsinnspill til Helsedirektoratets saksnummer 24/13487 · Datagrunnlag: 458 innspill samt opprop · Analyse ferdigstilt 13. mai 2026 · Halvard Nordang
+Analyse av høringsinnspill til Helsedirektoratets saksnummer 24/13487 · Datagrunnlag: 458 innspill samt opprop · Analyse ferdigstilt 4. mai 2026 · Sist oppdatert 14. mai 2026 · Halvard Nordang
 </footer>
 
 <script>
