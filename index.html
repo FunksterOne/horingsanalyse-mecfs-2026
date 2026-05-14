@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Analyse av høringsinnspill — Nasjonal faglig retningslinje for langvarig utmattelse inkludert ME/CFS</title>
 <meta name="description" content="Systematisk analyse av samtlige 458 høringsinnspill til Helsedirektoratets utkast (frist 4. mai 2026). 21 aktørprofiler, 7 dissenser, posisjonsfordeling og strukturelle funn. Maskinlesbare kildedata tilgjengelig.">
-<link rel="canonical" href="https://horingsanalyse-mecfs-2026.vercel.app/dashboard.html">
+<link rel="canonical" href="https://horingsanalyse-mecfs-2026.vercel.app/">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://horingsanalyse-mecfs-2026.vercel.app/dashboard.html">
+<meta property="og:url" content="https://horingsanalyse-mecfs-2026.vercel.app/">
 <meta property="og:title" content="Analyse av 458 høringsinnspill — Nasjonal faglig retningslinje for langvarig utmattelse inkl. ME/CFS">
 <meta property="og:description" content="Systematisk analyse av samtlige 458 høringsinnspill til Helsedirektoratets utkast (frist 4. mai 2026). 21 aktørprofiler, 7 dissenser, posisjonsfordeling og strukturelle funn. Maskinlesbare kildedata tilgjengelig.">
 <meta property="og:site_name" content="Høringsanalyse ME/CFS 2026">
@@ -151,10 +151,9 @@ h4 {
   color: var(--farge-tekst-dempet);
   margin: 0 0 32px 0;
   line-height: 1.6;
-  max-width: 80ch;
 }
 
-p { margin: 0 0 12px 0; max-width: 80ch; }
+p { margin: 0 0 12px 0; }
 
 .faktaboks {
   background: var(--farge-kort);
@@ -2758,6 +2757,33 @@ tegnRader();
 
 <p class="ingress">Denne fanen forklarer i detalj hva som er gjort og hvilke valg som er tatt underveis. Den dokumenterer også de viktige begrensningene ved analysen — hva den ikke kan svare på, og hvilke områder som er håndtert med særskilt diskresjon.</p>
 
+<h3>Maskinlesbare data</h3>
+
+<p>Alle data fra analysen er tilgjengelig som åpne filer for åpenhet, etterprøvbarhet og videre bruk. Filene er fritt nedlastbare.</p>
+
+<ul>
+<li><a href="data/kodebok.md"><code>kodebok.md</code></a> — Den fulle kodeboken (versjon 1.0). Beskriver alle kategorier og kriterier. 10 KB.</li>
+<li><a href="data/alle_kodinger.json"><code>alle_kodinger.json</code></a> — Komplett JSON-fil med alle 458 individuelle kodinger og meta-informasjon. 1,2 MB.</li>
+<li><a href="data/alle_kodinger.csv"><code>alle_kodinger.csv</code></a> — Flat tabellversjon (semikolon-separert) for Excel/regneark. 400 KB.</li>
+<li><a href="data/aktorprofiler.json"><code>aktorprofiler.json</code></a> — De 21 aktørprofilene som strukturert JSON. 30 KB.</li>
+<li><a href="data/dissenser.json"><code>dissenser.json</code></a> — Fulltekst av alle syv formelle dissenser fra arbeidsgruppen. 26 KB.</li>
+</ul>
+
+<h3>Om analysen</h3>
+
+<p>Analysen er gjennomført rent deskriptivt — den beskriver hva som er sagt i materialet, ikke hvilke argumenter som er saklig sterkest. Hovedforfatter, Halvard Nordang, er selv én av innsenderne (registrert som «Privatperson 3» med tre høringsinnspill levert 17.–23. april 2026). Hans posisjonering som hovedforfatter er åpent dokumentert under «Åpenhet om analysens egen posisjonering» lenger ned.</p>
+
+<p>Datagrunnlaget er hentet fra Helsedirektoratets offisielle høringsside. Excel-svar fra Forms-skjemaet og PDF-vedlegg er begge dekket. Sitater i dashboardet og i datafilene er begrenset til maksimalt 25 ord per sitat for å respektere åndsverk.</p>
+
+<div class="transparens">
+<strong>Merknad om forholdet til <code>horing.vercel.app</code>:</strong>
+<p style="margin: 8px 0 0 0;">Hovedforfatters eget høringsinnspill nr. 2 av 3 — en AGREE II-basert metodisk vurdering av utkastet — er publisert separat på <a href="https://horing.vercel.app" target="_blank" rel="noopener">horing.vercel.app</a>. Den siden er forfatterens eget innspill levert inn til Helsedirektoratet, og er ikke en del av denne deskriptive samleanalysen. De to publikasjonene har ulike formål og holdes adskilt.</p>
+</div>
+
+<h3>Lisens og bruk</h3>
+
+<p>Datafilene er fritt tilgjengelige for ikke-kommersielt bruk i forskning, journalistikk, undervisning og offentlig debatt. Vi ber om at analysen krediteres som «Høringsanalyse ME/CFS-retningslinjen 2026, Halvard Nordang». Direkte sitater fra Helsedirektoratet og fra dissensbrevene er offentlig tilgjengelige primærkilder og kan brukes etter alminnelige sitatregler.</p>
+
 <h3>Datagrunnlag</h3>
 
 <p>Datagrunnlaget består av:</p>
@@ -2807,7 +2833,7 @@ tegnRader();
 </table>
 </div>
 
-<p>Tilsvarende struktur er brukt på alle 458 innspill. Hele datasettet med alle kodinger er tilgjengelig som maskinlesbare filer — se nederst i denne fanen.</p>
+<p>Tilsvarende struktur er brukt på alle 458 innspill. Hele datasettet med alle kodinger er tilgjengelig som maskinlesbare filer — se «Maskinlesbare data» øverst i denne fanen.</p>
 
 <h3>Begrensninger og forbehold</h3>
 
@@ -2889,23 +2915,6 @@ tegnRader();
 <li><strong>Sitater begrenset til 25 ord.</strong> Dette er for å respektere åndsverk og for å unngå at lange sitater dominerer fremstillingen.</li>
 <li><strong>Eksplisitt usikkerhetsmarkering.</strong> Hvor vi har trukket slutninger som går utover det innsenderen selv har skrevet (for eksempel hypotetisk identifisering av britisk pediater eller strukturell antagelse om mal-distribusjon), er dette eksplisitt markert.</li>
 </ul>
-
-<h3>Datasettet — maskinlesbare filer</h3>
-
-<p>Hele analysematerialet er tilgjengelig som maskinlesbare filer for åpenhet, etterprøvbarhet og videre bruk. Filene leveres ved siden av dashboardet og kan brukes uavhengig av det:</p>
-
-<table>
-<thead><tr><th style="width: 230px;">Fil</th><th>Innhold</th></tr></thead>
-<tbody>
-<tr><td><code>kodebok.md</code></td><td>Den fulle kodeboken (versjon 1.0) som er brukt på alle 458 innspill. Beskriver hver kodingsdimensjon, kategoriene og kriteriene.</td></tr>
-<tr><td><code>alle_kodinger.json</code></td><td>Samlet JSON-fil med alle 458 individuelle kodinger. Hver koding har strukturen som vist i eksempelet over. Inkluderer meta-informasjon om datasettet.</td></tr>
-<tr><td><code>alle_kodinger.csv</code></td><td>Flat tabellversjon (semikolon-separert) for bruk i Excel eller statistikkverktøy. Én rad per innspill med 19 kolonner.</td></tr>
-<tr><td><code>aktorprofiler.json</code></td><td>De 21 aktørprofilene som strukturert JSON, med samme innhold som fanen «Aktørprofiler».</td></tr>
-<tr><td><code>dissenser.json</code></td><td>Fulltekst av alle syv formelle dissenser — fire fagdissenser fra arbeidsgruppen og tre brukerorganisasjons-dissenser.</td></tr>
-</tbody>
-</table>
-
-<p>Filene følger samme prinsipper som dashboardet — sitater er begrenset til maks 25 ord, sensitive opplysninger fra etterlatte og familier med opphopning er anonymisert, og Helsedirektoratets egen anonymisering av privatpersoninnsendere er videreført.</p>
 
 <h3>Hva som ikke er gjort, og hvorfor ikke</h3>
 
