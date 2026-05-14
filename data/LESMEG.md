@@ -64,35 +64,35 @@ Flat tabellversjon (semikolon-separert) for Excel og statistikkverktøy. 19 kolo
 ### aktorprofiler.json (30 KB)
 De 21 aktørprofilene som strukturert JSON. Inkluderer kjernebudskap, sentrale sitater, koblinger til andre aktører og strukturell betydning for hver av:
 
-**A. Sentrale aktører på den biomedisinske siden (6):**
+**A. Sentrale aktører på den biomedisinske siden (7):**
 1. Norges ME-forening
 2. ME-foreldrene
 3. ME-forskningsgruppen ved Haukeland universitetssykehus og UiB
 4. Røysumtunet
 5. Pårørendealliansen
 6. Norsk Covidforening
+7. Nina E. Steinkopf (melivet.com) — eget innspill (id 424) + distribusjonsaktivist for standardmal-formulering
 
 **B. Den biopsykososiale tilnærmingen og Nasjonal kompetansetjeneste (3):**
-7. Karlsonpsykologene
-8. Recovery Norge
-9. Nasjonal kompetansetjeneste for CFS/ME
+8. Karlsonpsykologene
+9. Recovery Norge
+10. Nasjonal kompetansetjeneste for CFS/ME
 
 **C. Statlige og regulerende aktører (2):**
-10. Folkehelseinstituttet
-11. Arbeids- og velferdsdirektoratet (NAV)
+11. Folkehelseinstituttet
+12. Arbeids- og velferdsdirektoratet (NAV)
 
 **D. Forskning og dokumentasjon (3):**
-12. Forskningsstiftelsen Fafo (Anne Kielland)
-13. Bjørn Getz Wold (ME-Fondet)
-14. Frøydis Lilledalen med flere
+13. Forskningsstiftelsen Fafo (Anne Kielland)
+14. Bjørn Getz Wold (ME-Fondet)
+15. Frøydis Lilledalen med flere
 
 **E. Spesielle individuelle aktører (3):**
-15. Anonym britisk senior pediater
-16. Anonym psykologspesialist med biomedisinsk linje
-17. Profesjonsforeningene (samlet)
+16. Anonym britisk senior pediater
+17. Anonym psykologspesialist med biomedisinsk linje
+18. Profesjonsforeningene (samlet)
 
-**F. Refererte aktører som ikke har levert eget innspill (4):**
-18. Nina E. Steinkopf (melivet.com)
+**F. Refererte aktører som ikke har levert eget innspill (3):**
 19. Vegard Bruun Wyller
 20. Karolinska Institutet (utmattningssyndrom-modellen)
 21. Det øvrige refererte overbelastnings-økosystemet

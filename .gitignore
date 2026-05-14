@@ -29,3 +29,5 @@ npm-debug.log*
 
 # Lokale skript som ikke skal pushes
 *.local.sh
+
+.vercel
