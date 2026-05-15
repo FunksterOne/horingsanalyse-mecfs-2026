@@ -111,6 +111,25 @@ Fulltekst av alle syv formelle dissenser:
 6. Norsk Covidforening (Carina Mørch-Storstein) — 03.03.2026
 7. ME-foreldrene (Tanja Thorsen) — april 2026
 
+### opprop.json (4 KB)
+Fulltekst og strukturerte metadata for det kollektive oppropet med 3 034 underskrifter (id 458 i datasettet).
+
+Felter:
+- **meta.tittel** — oppropets tittel
+- **meta.forfatter** — oppropsforfatter (Gry Antonsen)
+- **meta.plattform** — opprop.net
+- **meta.url** — lenke til opprop.net-siden
+- **meta.opprettet** — dato oppropet ble lansert (17.03.2026)
+- **meta.innsendt_til_helsedirektoratet** — 03.05.2026
+- **meta.underskrifter_ved_innsending** — 3 034
+- **meta.innspill_id_i_datasett** — 458
+- **meta.pulje** — 4
+- **meta.tegn_uten_mellomrom** — 2 648
+- **meta.spredningskanaler** — liste over kjente distribusjonskanaler
+- **fulltekst** — hele oppropsteksten ordrett
+
+Oppropet er en primærkilde i materialet og dokumenteres her i sin helhet for etterprøvbarhet.
+
 ## Bruksveiledning
 
 ### For forskere
