@@ -253,6 +253,28 @@
       "ICD-11 8E49 som koding"
     ],
     "sitat": "Det er ingen kvalitative forskjeller mellom langvarig utmattelse hvor ME/CFS-kriteriene er oppfylt og der de ikke er det.",
+    "internasjonal_forankring": {
+      "leder": "Ingrid B. Helland",
+      "medforfatter_paa": "EUROMENE-konsensusen 2021 (Nacul et al., Medicina 57:510)",
+      "kontekst": "Europeisk ekspertkonsensus med 55 forfattere fra 22 land, utarbeidet under COST Action 15111",
+      "forfatter_roller": [
+        "validation",
+        "investigation",
+        "writing—original draft preparation",
+        "writing—review and editing"
+      ],
+      "euromene_posisjoner": [
+        "PEM som obligatorisk kardinalsymptom (modifisert Fukuda 1994, IOM 2015, CCC 2003)",
+        "Canadakriteriene anbefalt for diagnose-bekreftelse",
+        "Pacing og energy envelope-teori (Jason 2008) eksplisitt anbefalt",
+        "CBT begrenset til «supportive, not curative»",
+        "GET ikke anbefalt",
+        "2–4 ME/CFS-spesialister per million innbyggere, ett senter per 10 millioner"
+      ],
+      "spenn_til_nkt_horingsinnspill": "NKTs eget høringsinnspill 2026 (id 206) tar motsatt posisjon på de samme kjernepunktene — «ingen kvalitative forskjeller» mellom ME/CFS og annen langvarig utmattelse, og PEM som ikke spesifikt for ME/CFS.",
+      "observasjon": "Strukturell observasjon dashbordet noterer som faktum. Konkluderer ikke om hvilken posisjon som representerer Hellands faktiske faglige syn eller årsak til avvik.",
+      "kilde": "Nacul L, Authier FJ, Scheibenbogen C, Lorusso L, Helland IB, et al. European Network on Myalgic Encephalomyelitis/Chronic Fatigue Syndrome (EUROMENE): Expert Consensus on the Diagnosis, Service Provision, and Care of People with ME/CFS in Europe. Medicina. 2021;57(5):510. doi:10.3390/medicina57050510"
+    },
     "referert_av": "**Eksplisitt mistillit fra A-leiren**: id 380 navngir NKT direkte: 'NKT har på grunn av sin praksis og selektive holdning til kunnskapsgrunnlag, ingen troverdighet blant pasientene'.",
     "kobling_andre_aktorer": "Faglig nær FHI (id 344) i forklaringsmodell. Operativt utfordret av Haukeland-gruppen (id 391). Distinkt fra Karlsonpsykologene og Recovery Norge.",
     "kvalitet": "sikker"
